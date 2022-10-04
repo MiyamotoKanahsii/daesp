@@ -1,5 +1,7 @@
 --- Made by kel#1835
+_G.Esp = true;
 
+while _G.Esp == true do
 local esp_settings = { ---- table for esp settings 
     textsize = 8,
     colour = 255,255,255
@@ -30,6 +32,7 @@ game:GetService("RunService").RenderStepped:Connect(function() ---- loops faster
         if v ~= game:GetService("Players").LocalPlayer and v.Character.Head:FindFirstChild("Cracked esp")==nil  then -- craeting checks for team check, local player etc
             esp.Text = "{"..v.Name.."}"
             gui:Clone().Parent = v.Character.Head
+            end
     end
 end
 end)
